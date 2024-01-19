@@ -1,0 +1,405 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+     .container {
+            margin-top: 50px;
+        }
+
+        .about-image {
+            max-width: 100%;
+            margin-top: 4vh;
+            height: auto;
+        }
+        img {
+          max-width: 216vh;
+          height: 100vh;
+        }
+        .about-content {
+            margin-top: 20px;
+        }
+         @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    .auto-typing-text {
+      overflow: hidden;
+      margin-left: 30vh;
+      border-right: 1px solid #000;
+      white-space: nowrap;
+      animation: typing 2s steps(40) infinite;
+    }
+    h3 {
+      margin-left: 20vh;
+    }
+     table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px;
+            margin-left: 20vh;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .card-group {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .item-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #ff6600;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .submit-btn {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" onclick="showPage('home')">Home</a>
+  <a href="#" onclick="showPage('about')">About</a>
+  <a href="#" onclick="showPage('product')">Product</a>
+  <a href="#" onclick="showPage('contact')">Contact</a>
+   <a href="#" onclick="showPage('feedback')">FeedBack</a>
+</nav>
+
+<div id="home" style="display: block;">
+  <img src="img/BSCOVER1.png">
+</div>
+<!--------------------Animation------------------------------------------------------------->
+<div class="auto-typing-text">Address:-5/A/23 Mahiyangana Road,Udadumbara, Tel:-0812456789, Email:-ABCD@gmail.com, Bookshop: Sadun Book Center</div>
+<!-----------------------table------------------------------------------------------------->
+<div id="about" style="display: none;">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6 order-md-2">
+            <img src="img/image4.jpg" alt="About Us" class="about-image img-fluid">
+        </div>
+        <div class="col-md-6 about-content">
+          <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit orci vel turpis tincidunt, vel
+                fermentum neque euismod. Nulla facilisi. Nullam quis ante vel ex mattis euismod ac vel purus.
+                Suspendisse potenti. In hac habitasse platea dictumst. Nullam non sodales tellus. Sed volutpat ligula
+                sit amet semper cursus. Suspendisse id suscipit elit. Vivamus nec urna et augue convallis finibus.
+                Aenean interdum, leo vel efficitur volutpat, justo metus luctus nisi, vel hendrerit est arcu id nunc.
+            </p>
+            <p>Integer malesuada arcu vel libero volutpat, eget facilisis mi ullamcorper. Duis ullamcorper metus id
+                tellus venenatis, nec volutpat purus bibendum. Fusce auctor tincidunt diam, a iaculis leo tempus vel.
+                Nam hendrerit ultricies odio, a vehicula nulla finibus eu. Fusce id neque eget enim fermentum
+                fringilla. Vivamus ullamcorper, mi vitae hendrerit tristique, metus nisl iaculis arcu, id pharetra justo
+                felis vitae nunc.
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="product" style="display: none;">
+  <h2 class="text-center mb-4">Books</h2>
+   <div class="card-group">
+        <div class="card">
+            <img src="img/91Sy3S-198L._SL1500_.jpg" alt="Product 1">
+            <div class="card-content">
+                <div class="item-name">ADF</div>
+                <div class="price">RS 750.00</div>
+                <button class="submit-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/156480764.jpg" alt="Product 2">
+            <div class="card-content">
+                <div class="item-name">ABC</div>
+                <div class="price">RS 650.00</div>
+                <button class="submit-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/56653736.jpg" alt="Product 3">
+            <div class="card-content">
+                <div class="item-name">CDS</div>
+                <div class="price">RS 500.00</div>
+                <button class="submit-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <h3>Books List</h3>
+        <table>
+        <thead>
+            <tr>
+                <th>Books Name</th>
+                <th>Author</th>
+                <th>Date</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ABC</td>
+                <td>Author 1</td>
+                <td>2022-01-05</td>
+                <td>RS 650.00</td>
+            </tr>
+            <tr>
+                <td>DEF</td>
+                <td>Author 2</td>
+                <td>2022-01-10</td>
+                <td>RS 500.00</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</div>
+
+<div id="contact" style="display: none;">
+     <!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form id="contactForm" onsubmit="return validateForm()">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
+</section>
+</div>
+<div id="feedback" style="display: none;">
+     <!-- Feedback Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">FeedBack</h2>
+      <form id="feedbackForm">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">FeedBack</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+      </form>
+    </div>
+  </section>
+</div>
+<script>
+  function showPage(pageId) {
+    var pages = document.querySelectorAll('div[id^=""]');
+    for (var i = 0; i < pages.length; i++) {
+      pages[i].style.display = 'none';
+    }
+
+    // Show the selected page
+    document.getElementById(pageId).style.display = 'block';
+     
+    return true;
+  }
+     
+</script>
+<!---------------------------------------Footer Page-------------------------------------->
+ <footer class="bg-dark text-center text-lg-start text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">See other books</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>Bestsellers</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>All books</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"><i class="fas fa-user-edit fa-fw fa-sm me-2"></i>Our authors</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Execution of the contract</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Supply</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"><i class="fas fa-backspace fa-fw fa-sm me-2"></i>Returns</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Regulations</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Privacy policy</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Publishing house</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-white">The BookStore</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">123 Street</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">05765 NY</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"><i class="fas fa-briefcase fa-fw fa-sm me-2"></i>Send us a book</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Write to us</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>Help in purchasing</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Check the order status</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"><i class="fas fa-envelope fa-fw fa-sm me-2"></i>Join the newsletter</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      Respensive Web Page:
+      <a class="text-white" href="https://mdbootstrap.com/">ABCG@gmail.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+correct full  code using html,css 
